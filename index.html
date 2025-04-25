@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Text Generator</title>
+</head>
+<body>
+
+  <h2>Dynamic Text Generator</h2>
+
+  <input type="text" id="userInput" placeholder="Type something">
+  <button onclick="generateText()">Generate</button>
+
+  <p id="output"></p>
+
+  <script>
+    function generateText() {
+      const input = document.getElementById("userInput").value;
+      const output = document.getElementById("output");
+
+      if (input.trim() === "") {
+        output.innerText = "Please enter text.";
+        return;
+      }
+
+      output.innerText = "Generated: " + input;
+    }
+  </script>
+
+</body>
+</html>
